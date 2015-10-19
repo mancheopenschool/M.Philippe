@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<htlm>
+
+<head>
+	<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap-theme.min.css">
+       <link rel="stylesheet" type="text/css" href="apprendre_bootstrap.css">
+       <meta charset="utf-8" />
+</head>	
+<!-- Très petit format  .col-xs- < 768px
+     Petit format       .col-sm- >= 768px & < 992px
+     Moyen format       .col-md- >= 992px & < 1200px
+     Large format       .col-lg- >= 1200px 
+    "container crée un espace entre les tableau-->
+
+
+<body>
+	<div class="container">
+        <div class="row">
+            <div class="col-xs-8">Article: col-xs-8</div>
+            <div class="col-xs-4">Sidebar: col-xs-4</div> 
+        </div> 
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">Article: md-8</div>
+            <div class="col-md-4">Sidebar: md-4</div> 
+        <div>  
+    </div> 
+
+
+<div class="container">
+        <div class="row">
+            <div class="col-lg-3">Article: lg-3</div>
+            <div class="col-lg-6">Sidebar: lg-6</div> 
+            <div class="col-lg-3">colonne droite   </div>
+        </div> 
+<!--Saut de colonnes. Créer des espaces entre les colonnes
+avec  col-lg-offset- 'nb colonnes'-->
+        <div class="row">
+            <div class="col-lg-3">3 colonnes gauche</div>
+            <div class="col-lg-offset-6 col-lg-3">3 colonnes droite</div>
+        </div>
+</div>
+
+<div class="container">
+        <div class="row">
+            <div class="col-lg-3">Article: lg-3</div>
+            <div class="col-lg-6">Sidebar: lg-6</div> 
+            <div class="col-lg-3">colonne droite   </div>
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-6 col-lg-3">3 colonnes gauche</div>
+            
+        </div>
+</div>
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-lg-2 col-lg-offset-1">2 colonnes</div>
+    <div class="col-lg-4 col-lg-offset-2">4 colonnes</div>
+    <div class="col-lg-2 col-lg-offset-1">2 colonnes</div>
+
+  </div>
+
+</div>
+<!-- Imbrcation d'éléments -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">Premier niveau avec 12 colonnes <!-- le <div> n'est pas fermé -->
+            <div class="row">
+                <div class="col-md-8">Second niveau avec 8 colonnes
+                    <div class="row">
+                        <div class="col-md-4">Troisième niveau avec 4 colonnes</div>
+                            <div class="col-md-6 col-md-offset-2">Troisième niveau avec 6 colonnes
+                                <div class="row">
+                                    <div class="col-md-3 col-offset-1">
+                                        Quatrième niveau avec 3 colonnes</div>
+                                    <div class="col-md-5 col-md-offser-1">
+                                        Qyatrième niveau avec 5 colonnes</div>    
+                                </div>
+                            </div>
+                    </div>                               
+                </div>
+                <div  class="col-md-4">Second niveau avec 4 colonnes></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Ordre des colonnes avec les classes:
+ col-lg-push-'valeur' permet de décaler une colonne vers la droite
+ col-lg-pull-'valeur' permet de décaler une colonne vers la gauche  
+-->
+
+
+
+
+
+</body>
+
+<footer>
+	<script src="bootstrap/3.3.5/js/bootstrap.min.js" />
+</footer>
+
+
+</html>

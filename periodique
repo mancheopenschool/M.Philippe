@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+</head>
+               
+        <link rel="stylesheet" href="periodique.css" >
+       
+        <meta charset="utf-8" />
+</head>
+
+	<body>
+
+		<h1>Tableau périodique des éléments de Dmitri MENDELEIEV</h1>
+
+		<table>
+			<tr>
+				<td>1</td>
+				<td class="vert_r">Hydrogène<br />1 <br />H</td>
+				<td class="fusion"> Nom de l'élément <br />Numéro atomique <br />Symbole chimique</td>
+				<td colspan="12"> </td>
+				<td>13 <br /> IIA</td>
+				<td>14 <br /> IVB</td>
+				<td>15 <br /> VA</td>
+				<td>16 <br /> VIA</td>
+				<td>17 <br /> VIIA</td>
+				<td class="cyan_r">Hélium   <br />2 <br />He</td>
+			</tr> 
+			
+			
+			<tr>
+				<td>2</td>
+				<td class="rouge"   >Lithium   <br />3 <br />Li</td>
+				<td class="beige"   >Béryllium <br />4 <br />Be</td>
+				<td colspan="12"    ></td>
+				<td class="gris"    >Bore      <br />5 <br />B </td>
+				<td class="vert"    >Carbone   <br />6 <br />C </td>
+				<td class="vert_r"  >Azote     <br />7 <br />N </td>
+				<td class="vert_r"  >Oxygène   <br />8 <br />O </td>
+				<td class="jaune_r" >FLuor     <br />9 <br />F </td>
+				<td class="cyan_r"  >Néon      <br />10<br />Ne</td>
+			</tr> 
+			
+			<tr> 
+				<td>3</td>
+				<td class="rouge">Sodium    <br />11<br />Na </td>
+				<td class="beige">Magnésium <br />12<br />Mg </td>				
+				<td class="fusion2" colspan="2"> </td>
+				<td>3 <br /> IIIB</td>
+				<td>4 <br /> IVB</td>
+				<td>5 <br /> VB</td>
+				<td>6 <br /> VIB</td>
+				<td>7 <br /> VIIB</td>
+				<td>8 <br /> </td>
+				<td>9 <br /> VIIIB</td>
+				<td>10 <br /> </td>
+				<td>11 <br />IB</td>
+				<td>12 <br />IIB</td>
+				<td class="al"   >Aluminium <br />13<br />Al</td>
+				<td class="gris" >Silicium  <br />14<br />Si</td>
+				<td class="vert" >Phosphore <br />15<br />P </td>
+				<td class="vert" >Soufre    <br />16<br />S </td>
+				<td class="jaune_r">Chlore  <br />17<br />Cl</td>
+				<td class="cyan_r">Argon    <br />18<br />Ar</td>
+			</tr> 
+
+			<tr>
+				<td>4</td>
+				<td class="rouge">Potassium <br />19	<br />K  </td>
+				<td class="beige">Calcium   <br />20	<br />Ca </td>
+				<td colspan="2"> </td>				
+				<td class="rose" >Scandium  <br />21	<br />Sc </td>				
+				<td class="rose" >Titane    <br />22	<br />Ti </td>
+				<td class="rose" >Vanadium  <br />23	<br />V  </td>
+				<td class="rose" >Chrome    <br />24	<br />Cr </td>
+				<td class="rose" >Manganèse <br />25	<br />Mn </td>
+				<td class="rose" >Fer       <br />26    <br />Fe </td>
+				<td class="rose" >Cobalt    <br />27	<br />Co </td>
+				<td class="rose" >Nickel    <br />28	<br />Ni </td>
+				<td class="rose" >Cuivre    <br />29	<br />Cu </td>
+				<td class="rose" >Zinc      <br />30	<br />Zn </td>
+				<td class="al"   >Gallium   <br />31	<br />Ga </td>
+				<td class="gris" >Germanium <br />32	<br />Ge </td>
+				<td class="gris" >Arsenic   <br />33	<br />As </td>
+				<td class="vert" >Sélénium  <br />34	<br />Se </td>
+				<td class="jaune">Brome     <br />35	<br />Br </td>
+				<td class="cyan_r">Krypton  <br />36	<br />Kr </td>
+			</tr>
+
+			<tr> 
+				<td>5</td>
+				<td class="rouge"   >Rubidium  <br />37<br />Rb </td>
+				<td class="beige"   >Strontium <br />38<br />Sr </td>
+				<td colspan="2"> </td>
+				<td class="rose"    >Yttrium   <br />39<br />Y  </td>
+				<td class="rose"    >Zirconium <br />40<br />Zr </td>
+				<td class="rose"    >Niobium   <br />41<br />Nb </td>
+				<td class="rose"    >Molybdène <br />42<br />Mo </td>
+				<td class="rose"    >Technétium<br />43<br />Tc </td>
+				<td class="rose"    >Ruthénium <br />44<br />Ru </td>
+				<td class="rose"    >Rhodium   <br />45<br />Rh </td>
+				<td class="rose"    >Palladium <br />46<br />Pd </td>
+				<td class="rose"    >Argent    <br />47<br />Ag </td>
+				<td class="rose"    >Cadmium   <br />48<br />Cd </td>
+				<td class="al"      >Indium    <br />49<br />In </td>
+				<td class="al"      >Etain     <br />50<br />Sn </td>
+				<td class="gris"    >Antimoine <br />51<br />Sb </td>
+				<td class="gris"    >Tellure   <br />52<br />Te </td>
+				<td class="jaune"   >Iode      <br />53<br />I  </td>
+				<td class="cyan_r">Xenon       <br />54<br />Xe </td>
+			</tr> 
+			
+			<tr> 
+				<td>6</td>
+				<td class="rouge">Césium    <br />55	<br />Cs </td>
+				<td class="beige">Baryum    <br />56	<br />Ba </td>
+				<td class="lant" colspan="3">*</td>				
+				<td class="rose" >Hafnium   <br />72	<br/>Hf  </td>
+				<td class="rose" >Tantale   <br />73 	<br />Ta </td>
+				<td class="rose" >Tungstène <br />74	<br />W  </td>
+				<td class="rose" >Rhénium   <br />75	<br />Re </td>
+				<td class="rose" >Osnium    <br />76	<br />Os </td>
+				<td class="rose" >Iridium   <br />77	<br />Ir </td>
+				<td class="rose" >Platine   <br />78	<br />Pt </td>
+				<td class="rose" >Or        <br />79	<br />Au </td>
+				<td class="rose" >Mercure   <br />80	<br />Hg </td>
+				<td class="al"   >Thallium  <br />81	<br />Tl </td>
+				<td class="al"   >Plomb     <br />82	<br />Pb </td>
+				<td class="al"   >Bismuth   <br />83	<br />Bi </td>
+				<td class="al_dash">Polonium<br />84	<br />Po </td>
+				<td class="gris_dash">Astate<br />85	<br />At </td>
+				<td class="cyan_r_dash">Radon <br />86	<br />Rn </td>
+			</tr>
+
+			<tr>
+				<td>7</td>
+				<td class="rouge_dash">Francium <br />87 <br />Fr</td>
+				
+				<td class="beige_dash">Radium   <br />88 <br />Ra</td>
+				<td class="acti" colspan="3">**</td>
+				<td class="rose_dot" >Rutherfordium    <br />104<br />Rf</td>
+				<td class="rose_dot" >Dubnium          <br />105<br />Db</td>
+				<td class="rose_dot" >Seaborgium       <br />106<br />Sg</td>
+				<td class="rose_dot" >Bohrium          <br />107<br />Bh</td>
+				<td class="rose_dot" >Hassium          <br />108<br />Hs</td>
+				<td class="rose_dot" >Meitnérium       <br />109<br />Mt</td>
+				<td class="rose_dot" >Darmstadtium     <br />110<br />Ds</td>
+				<td class="rose_dot" >Roentgenium      <br />111<br />Rg</td>
+				<td class="rose_dot" >Copernicium      <br />112<br />Cn</td>
+				<td class="bleu_clair_dot" >Unumtrium  <br />113<br />Uut</td>
+				<td class="bleu_clair_dot" >Ununquadium<br />114<br />Uuq</td>
+				<td class="bleu_clair_dot" >Ununpentium<br />115<br />Uup</td>
+				<td class="bleu_clair_dot" >Ununhexium <br />116<br />Uuh</td>
+				<td class="bleu_clair_dot" >Ununseptium<br />117<br />Uus</td>
+				<td class="bleu_clair_dot" >Ununoctium <br />118<br />Uuo</td>
+			</tr> 
+
+		</table>
+
+		<p>
+		</p>	
+		
+		<table class="tab2">
+			<tr>
+				<td>* Lanthanides: </td>
+				<td class="lant"> Lanthane 	<br /> 57 <br /> La</td>
+				<td class="lant"> Cérium 	<br /> 58 <br /> Ce</td>
+				<td class="lant"> Praséodyme <br /> 59 <br /> Pr</td>
+				<td class="lant"> Néodyme 	<br /> 60 <br /> Nd</td>
+				<td class="lant"> Prométhium <br /> 61 <br /> Pm</td>
+				<td class="lant"> Samarium   <br /> 62 <br /> Sm</td>
+				<td class="lant"> Europium   <br /> 63 <br /> Eu</td>
+				<td class="lant"> Gadolinium <br /> 64 <br /> Gd</td>
+				<td class="lant"> Terbium    <br /> 65 <br /> Tb</td>
+				<td class="lant"> Dysprosium <br /> 66 <br /> Dy</td>
+				<td class="lant"> Holmium    <br /> 67 <br /> Ho</td>
+				<td class="lant"> Erbium     <br /> 68 <br /> Er</td>
+				<td class="lant"> Thulium    <br /> 69 <br /> Tm</td>
+				<td class="lant"> Ytterbium  <br /> 70 <br /> Yb</td>
+				<td class="lant"> Lutécium   <br /> 71 <br /> Lu</td>							
+			</tr>	
+
+			<tr>
+				<td>** Actinides: </td>
+				<td class="acti"> Actinium 	  <br /> 89 <br /> Ac</td>
+				<td class="acti"> Thorium 	  <br /> 90 <br /> Th</td>
+				<td class="acti"> Protactinium <br /> 91 <br /> Pa</td>
+				<td class="acti"> Uranium 	  <br /> 92 <br /> U </td>
+				<td class="acti"> Neptunium    <br /> 93 <br /> Np</td>
+				<td class="acti"> Plutonium    <br /> 94 <br /> Pu</td>
+				<td class="acti"> Américium    <br /> 95 <br /> Am</td>
+				<td class="acti"> Curium       <br /> 96 <br /> Cm</td>
+				<td class="acti"> Berkélium    <br /> 97 <br /> Bk</td>
+				<td class="acti"> Californium  <br /> 98 <br /> Cf</td>
+				<td class="acti"> Einsteinium  <br /> 99 <br /> Es</td>
+				<td class="acti"> Fermium      <br /> 100<br /> Fm</td>
+				<td class="acti"> Mendélévium  <br /> 101<br /> Md</td>
+				<td class="acti"> Nobélium     <br /> 102<br /> Nb</td>
+				<td class="acti"> Lawrencium   <br /> 103<br /> Lr</td>
+
+			</tr>
+
+		</table>	
+
+
+	</body>
+
+</html>	

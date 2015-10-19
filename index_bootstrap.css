@@ -1,0 +1,20 @@
+.container {
+	background-color: lightgreen;
+}
+.carousel{
+	margin: 10px auto;
+	width: 1000px;
+}
+.row{
+	margin: 0 5px;
+}
+div{
+	margin: 5px 0;
+}
+
+.milieu {
+	background-color: #AAA;
+}
+.milieu img{
+	width: 100%;
+}

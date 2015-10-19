@@ -1,0 +1,148 @@
+ /** table { 
+	border: 1px solid;
+	border-collapse: separate;
+} */
+
+h1 {
+	text-align: center;
+	border : 4px outset;
+	width: 60%;
+	margin-left: 300px;
+}
+
+td {
+	/**border: 1px solid;*/
+	text-align: center;
+	border-radius: 10px;
+}
+
+.vert {
+	background: #A0FFA0;
+}
+
+.rouge {
+	background: #FF6666;
+}
+
+.beige {
+	background: #ffdead;
+}
+
+.rose {
+	background: #FFC0C0;
+}
+
+.gris {
+	background: #CCCC00;
+
+}
+
+.jaune {
+	background: #FFFF99;
+}
+.cyan {
+	background: #8BF2F2;
+}
+
+.al {
+	background: #CCCCCC;
+}
+
+.bleu_clair {
+	background: #D5FAF6;
+}
+
+.lant {
+	background: #F2C3F8;
+	/**width: 100px;*/
+}
+
+.acti {
+	background: #FBA4BB;
+}
+
+.vert_r {
+	 background: #A0FFA0;
+	color: red;
+}
+
+.cyan_r {
+	color:  red;
+	background: #8BF2F2;
+}
+
+.jaune_r {
+	background: #FFFF99;
+	color: red;
+}
+
+.al_dash {
+	background: #CCCCCC;
+	border: dashed;
+}
+ 
+ .gris_dash {
+ 	border: dashed;
+ 	background: #CCCC00;
+ }
+
+ .rouge_dash {
+ 	background: #FF6666;
+ 	border: dashed;
+ }
+
+ .beige_dash {
+ 	border: dashed;
+ 	background: #ffdead;
+ }
+
+ .cyan_r_dash {
+ 	background: #8BF2F2;
+ 	border: dashed;
+ }
+
+.rose_dot {
+	background: #FFC0C0;
+	border: dotted;
+}
+
+.bleu_clair_dot {
+	background: #D5FAF6;
+	border: dotted;
+}
+
+.fusion{
+	width: 130px;
+	text-align: left;
+}
+
+.fusion2 {
+	width: 150px
+}
+
+.tab2 {
+	margin-left: 250px;
+}
+/** (min-width: 400px) and*/
+
+@media screen and (min-width: 800px) and (max-width: 1280px) {   
+		h1
+		{
+			width: 800px;
+			background: yellow;
+			margin-left: 0px;
+		
+		}
+
+		table 
+		{
+			width: 50%px;
+		
+		}
+		.tab2 
+		{
+			margin-left: 0px;
+			width: 30%;	
+		}
+		
+															}

@@ -1,0 +1,49 @@
+.top {
+	background-color: #D9DAF4;
+	width: 80%;
+	border: 2px;
+	border-color: #487C5A;
+	margin-left: 120px;
+	padding: 8px;
+
+}
+
+
+#logo {
+	text-align: center;
+	/**   */
+
+}
+
+#id_date {
+	/**background-color: #EDEA7D;*/
+	line-height: 30px;
+	text-align: center;
+}
+
+.recherche {
+	text-align: center;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #2D7061;
+  color: #ffffff;
+  font-size: 12px Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-weight: 500;
+
+}
+
+.col-lg-1 {
+	color: white;
+	width: 120px;
+}
+
+.nav {
+	color: white;
+	font-weight: bold;
+
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html>
+  
+<head>
+ <!--<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">-->
+    
+    <link rel="stylesheet" type="text/css" href="jQuery_tp.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">   
+
+<meta charset="utf-8" />
+    <!-- jquery-ui-1.11.4.custom/  /jquery-ui-1.11.4.custom/-->
+            
+
+</head>
+
+<body>
+
+	<div id="nav">
+		<ul>
+			<a href="#"><li>Rubrique 1</li></a>
+			<a href="#"><li>Rubrique 2</li></a>
+			<a href="#"><li>Rubrique 3</li></a>
+			<a href="#"><li>Rubrique 4</li></a>
+			<a href="#"><li>Rubrique 5</li></a>
+		</ul>
+	</div>
+
+	<p>Date: <input type="text" id="datepicker"></p>
+
+	<h1>Hello Word</h1>
+		<a href="#" class="chg">Change couleur H1 (Hello Word)</a>
+					<br /><br /><br />
+	
+	<div id="mos"> </div>#mos
+
+	<div><a href="#" class="onoff">Masquer / Afficher le carré vert</a></div>
+		<br /> <br />
+
+	<div>	 <button>Cliquez sur moi !</button>button: $("#mos").fadeOut('slow');</div>
+						<br />
+
+	<div class="cacher"></div>
+        <div class="cacher"></div>
+        <div class="cacher"></div>
+        <div class="cacher"></div>
+
+    </div>    
+	
+
+	<ul class="list_prenom" id="list_prenom">
+		<li>Bob</li>
+		<li>Willy</li>
+		<li>Damien</li>
+		<li>David</li>
+		<li>Chloe</li>
+	</ul>
+	
+
+	<div><a href="#list_prenom" class="prenom">Ajoute prénom</a></div>
+
+	<div>
+		<div class="image"><img src="http://fakeimg.pl/150/" /></a>				</div>	
+		<div class="image"><img src="http://fakeimg.pl/250x100/" /></a>			</div>	
+		<div class="image"><img src="http://fakeimg.pl/250x100/ff0000/" /></a>	</div>
+		<div class="image"><img src="http://fakeimg.pl/250x100/?text=Hello" /></a></div>
+
+	</div>
+
+	<div id="bar">
+
+
+	</div>	
+
+			<br /><br /><br /><br />
+
+			
+	<div id="accordeon"> <!-- Bloc principal, sur lequel nous appellerons le plugin -->
+    	<h3><a href="#">Section 1</a></h3>
+    		<div>
+        		<p>Sous-menu 1</p>
+    		</div>
+
+    	<h3><a href="#">Section 2</a></h3>
+    		<div>
+        		<p>Sous-menu 2</p>
+    		</div>
+
+    	<h3><a href="#">Section 3</a></h3>
+    		<div>
+        		<p>Sous-menu 3</p>
+    		</div>
+
+	</div>
+
+	<h2>Créer des éléments HTML</h2>
+	
+		<h4>Création d'une variable </h4>
+		$h1 = $("&lth1&gtTitre&lt/h1&gt");<br /><br />			
+		$p = $("&ltp&gtParagraphe&lt/p&gt");
+				<br /><br />
+	<h2>Insérer des éléments HTML .append - .prepend</h2>
+		.append: insère l'élément spécifié en dernier enfant de l'élément cible.<br />
+		.prepend()- insère l'élément spécifié en premier enfant de l'élément cible.<br /> <br /> <br />
+		
+		$("body").append("&ltp>Je suis un paragraphe&lt/p&gt")  
+
+
+	<h2>Avant - Après</h2>	
+		<h4>Pour insérer un paragraphe après l'id #un</h4>
+			$('#un').after("&ltp>Un louveau paragraphe&lt/p>"); 
+				<br /><br />
+
+	<h2>Supprimer des éléments  .empty() - .remove()</h2>
+	.empty() - 
+	supprime le contenu d'un élément et tous ses descendants.<br />Par exemple, si vous videz (avec .empty()) un 'ol', vous allez aussi supprimer tous ses 'li' et leur texte.<br /><br />
+	.remove() - 
+	supprime non seulement le contenu d'un élément, mais également l'élément lui-même.
+		<br /> <br />
+	$par = $("&ltp>Un nouveau paragraphe&lt/p>");<br />
+	$par.remove();
+
+	<h2>Faire basculer les classes .toggleClass()</h2>
+	.toggleClass() - Si l'élément appelé a la classe reçue en argument, alors .toggleClass() retire cette classe ; si l'élément cible n'a pas cette classe, .toggleClass() l'ajoute.
+		<br /> <br />
+	$("#text").click(function(){ <br />
+       $(this).toggleClass("highlighted");       
+       
+   });
+
+   <h2>Modifier le contenu .html() - .val()</h2>
+   		.html() - est utilisé pour définir le contenu du premier élément correspondant trouvé.<br /> 
+   		 $("p").html("La magie de jQuery en action !"); <br /><br />
+   		.val() - est utilisé pour récupérer la valeur d'éléments d'un formulaire.<br />
+   			$('input:checkbox:checked').val();
+   				<br /> <br />
+   		 $("p").html("La magie de jQuery en action !");
+
+   	<h2>To Do</h2>
+		<form name="checkListForm">
+			<input type="text" name="checkListItem"/>
+		</form>
+		<div id="button1">Add!</div>button1
+		<br/>
+		<div class="list"></div>	  
+
+	<h2>Supprimer ce qui a été cliqué</h2>
+	Etant donné que la class 'item' est créee au chargement de la page, '.remove()' ne fonctionnera pas puisqu'à ce moment la class 'item' n'existe pas.
+		<h4>gestionnaire d'évènement : .on()</h4>
+	Vous pouvez voir .on() comme un gestionnaire général, qui prend l'évènement, son sélecteur, et une action comme arguments. <br />
+	$(document).on('évènement', 'sélecteur', function() {
+    Fais quelque chose !
+	});
+				<br /><br />
+	 $(document).on('click', '.item', function(){ <br />
+    	$(this).remove();  
+      
+  		});<br /><br />
+
+  		En cliquant sur le mot, il disparaît
+
+  	<h2>Combiner .click() et .hover()</h2>
+  		
+  		$("div").click(function(){<br />
+      	$(this).fadeOut('fast');<br />
+  });<br />
+  	$("div").hover(function(){<br />
+      $("div").addClass('red');<br />  
+            
+  });<br />
+  Le contenu du 'div' deviendra rouge.
+
+  	<h2>L'événement double-clic : .dblclick()</h2>
+    	Le carré bleu claire disparaîtra après un double-click
+    	<div id="double"> <!--&ltdiv id="double"&gt-->
+
+
+    </div>
+    
+    $("#double").dblclick(function(){<br />
+        $(this).fadeOut('fast');<br />
+        });
+
+    <h2>Survol</h2>
+    l'effet hover est capable de prendre deux function(){}<br />
+    séparées par une virgule essntielle.<br />
+    Le premier function(){} que nous passons sera lancé quand nous survolons la cible. Là, nous appliquons une classe miseenvaleur.<br />
+La seconde function(){} sera appelée quand notre souris quitte l'objet. C'est à ce moment que nous enlevons notre classe miseenvaleur.     
+			<br /><br />
+	 $('div' ).hover(function(){<br />
+     $('div').addClass('active')<br />   
+    },<br />
+    
+     function(){<br />
+    $('div').removeClass('active')<br />
+        
+    }<br />
+  );
+
+  <h2>.focus()</h2>
+  		<form>
+			Name: <input type='text' name='name'></input>
+		</form>	<br /><br />
+		$('input').focus(function(){<br />
+    $('input').css('outline-color', '#FF0000');<br />      
+    }); <br />    
+   
+    <h2> L'événement .keydown() .animate</h2>
+    	L'effet .animate() prend deux arguments : l'animation à effectuer ainsi que la durée de l'animation.<br /><br />
+    	Le carré rouge se déplacera de 10px vers la droite en appuyant sur n'importe quelle touche<br />
+    <div id="anim"></div>
+    						<br /><br />
+    
+  <!-- Pour obtenir les effets sur une image, elle doit en position: relative dans le css -->
+    <div><img id ="mario" 
+    	src="http://i1061.photobucket.com/albums/t480/ericqweinstein/mario.jpg"/>
+    </div>
+    					<br /><br />
+      <div><img id ="logo" 
+    	src="http://i1061.photobucket.com/albums/t480/ericqweinstein/elevator.png"/>
+    </div>
+						<br /><br /><br /><br /><br /><br />
+    <p>
+    	$(document).ready(function(){	<br />
+  			$('div').click(function(){	<br />
+     		$('div').effect('explode'); <br />      
+  								}); 	<br />       
+								});		<br />
+
+    </p>	
+    
+
+    <div id="gris"> </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+	<br /><br /><br /><br />
+<footer>
+	
+  	<!--<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"> </script>  
+	
+	<script src="fancyapps-fancyBox-18d1712/source/jquery.fancybox.js"></script>
+	<script src="fancyapps-fancyBox-18d1712/source/jquery.fancybox.pack.js"></script>
+	<script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>         --> 
+	
+	<script type="text/javascript" src="../jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	
+	<script type="text/javascript" src="jQuery_tp.js"></script>
+</footer>
+
+
+</html>
+
+

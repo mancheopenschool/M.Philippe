@@ -1,0 +1,145 @@
+#mos {
+	height: 	100px;
+	width: 		100px;
+	background: 	green;
+	margin-left: 	50px;
+	border-radius: 	10px;
+
+	}
+
+.cacher {
+	height: 100px;
+    width: 100px;
+    background-color: #4ECDC4;
+    border-radius: 5px;
+    display: inline-block;
+
+	}
+
+
+
+.trouve {
+	background: red;
+
+		}
+
+#datepicker {
+	width: 270px;
+
+ 			}
+
+ .image {
+	display: inline-block;
+	margin-left: 15px;
+
+		}
+
+.list_prenom {
+	background: pink;	
+	width: 200px;
+
+			}
+
+
+#nav a {
+	margin-left: 15px;
+
+
+	}
+
+
+#nav li {
+	
+	display: 	inline-block;
+	background: black;
+	color: 		white;
+	width: 		auto;
+	padding: 	10px
+	
+	}
+
+#nav .active li {
+	background: red;
+
+				}
+
+
+#accordeon {
+	width: 500px;'
+
+}
+
+form {
+    display: inline-block;
+}
+
+#button1 {
+    display: inline-block;
+    height:20px;
+	width:70px;
+	background-color:#cc0000;
+	font-family:arial;
+	font-weight:bold;
+	color:#ffffff;
+	border-radius: 5px;
+	text-align:center;
+	margin-top:2px;
+}
+
+.list {
+	font-family:garamond;
+	color:#cc0000;
+}
+
+#double {
+	height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #ABCDEF;
+
+}
+
+.active {
+	 background-color:#556677;
+	
+}
+
+#anim {
+	height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: #FF0000;
+    position: relative;
+
+
+}
+
+#mario {
+    position: relative;
+}
+
+
+#logo {
+    position: relative;
+}
+
+#gris {
+	height: 	100px;
+	width: 		100px;
+	background: 	#cccccc;
+	margin-left: 	50px;
+	border-radius: 	10px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

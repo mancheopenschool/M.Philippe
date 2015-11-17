@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div id="red"></div>
+        <div id="blue"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+    </body>
+</html>
+
+	------- Exemple d'animation
+<!-- Style.css -->
+
+div {
+    height:100px;
+    width:100px;
+    display: inline-block;
+}
+
+#red {
+    background-color:#FF0000;
+}
+
+#blue {
+    background-color:#0000FF;
+}
+
+#yellow {
+    background-color:#E2BE22;
+}
+
+#green {
+    background-color:#008800;
+}
+
+<!-- script.js -->
+
+$(document).ready(function() {
+   $('div').mouseenter(function() {
+       $(this).animate({
+           height: '+=10px'
+       });
+   });
+   $('div').mouseleave(function() {
+       $(this).animate({
+           height: '-=10px'
+       }); 
+   });
+   $('div').click(function() {
+       $(this).toggle(1000);
+   }); 
+});
+
+
+
+
+
+
+
+
+<!-- Style.css -->
+div {
+    height:100px;
+    width:100px;
+    background-color:#FF0000;
+    border-radius:5px;
+}
+
+#green {
+    background-color:#008800;
+}
+<!-- Script.js -->
+$(document).ready(function() {
+    $('div').fadeOut(1000);
+});
+
+
+$(document).ready(function() {
+    $('#green').fadeOut(1000);
+});
+
+$(document).ready(function(){
+    $('div').slideDown('slow');
+
+});
+
+    ____________________________
+
+FadeTo() à l'intérieur de mouseenter(). fadeTo() prend deux arguments, ou entrées, entre ses parenthèses, séparés par une virgule : la vitesse à laquelle faire le fondu, et l'opacité (ou transparence) à atteindre. Par exemple,
+
+fadeTo('fast', 0.25);
+
+va faire disparaître rapidement l'élément visé jusqu'à 25 % de son opacité originelle, lui donnant une couleur très claire.
+
+mouseenter() 
+mouseleave() 
+slideDown()
+fadeTo()
+fadeOut()
+fadeIn()
+hide()
+
+
+_______________________________
+
+$(document).ready(function() {
+    Faire quelque chose
+});
+
+
+$(document).ready(function(){
+    $('div').mouseenter(function() {
+    $('div').fadeTo('fast', 1)  
+});
+});
+
+$(document).ready(function(){
+   $('div').mouseenter(function() { 
+  $('div').fadeTo('fast', 1)  
+});
+  $('div').mouseleave(function() {
+      $('div').fadeTo('fast', 0.5)
+  }); 
+});
+
+----------- Pour créer une variable
+Le '$' devant la 'var' n'est qu'une convention
+En revanche $('div') fait référence à un objet
+
+	$div = $('div')
+
+----------- Pour cacher un 'div'
+$(document).ready(function(){
+   $('div').hide()     
+});
+
+----------- Pour sélectionner un élément d'une liste
+$(document).ready(function() {
+ var $cible = $('li:nth-child(4)')   
+    $cible.fadeOut('fast');
+});
+
+---------- Sélectionne la class '.vanish'
+
+$(document).ready(function() {
+    $('button').click(function() {
+     $('.vanish').fadeOut('slow')   
+        
+    });
+});
+
+--------- Séléctionne 'id' $('#id')
+
+$(document).ready(function() {
+    $('button').click(function() {
+        $('#blue').fadeOut('slow');
+    });
+});
+
+Le point-virgule final est capital, c'est comme ça que jQuery sait que nous en avons fini avec notre instruction. Pour l'instant, une bonne règle d'or est de se dire que vous devriez placer des points-virgules à la fin de chaque ligne qui ne commence pas avec une { ouvrante.
+
+--------- Pour sélectionner plusieurs éléments HTML
+
+$('p, li').fadeTo('slow', 0);
+
+$(document).ready(function(){
+  $('.rose, .rouge').fadeTo('slow', 0);  
+        
+}); 
+
+
+--------- this 
+
+Au lieu d'utiliser fadeOut() sur tous les 'div', nous l'utilisons seulement sur ce (this) div-là, où this se rapporte au div survolé par la souris.
+
+$(document).ready(function() {
+    $('div').click(function() {
+        $(this).fadeOut('slow');
+    });
+});
+
+--------- Panneau glissant
+ <body>
+        <div class="panel">
+        <br />
+        <br />
+        <p>Maintenant vous me voyez !</p>
+        </div>
+        <p class="slide"><div class="pull-me">Déplacez-moi</div></p>
+    </body>
+
+$(document).ready(function(){
+    $('.pull-me').click(function(){
+     $('.panel').slideToggle('slow');   
+    });    
+});
+
+------------ Créer des éléments HTML
+  
+$p  = $("<p>Je suis un nouveau paragraphe !</p>");
+$h1 = $("<h1>Bonjour</h1>");
+
+----------- Insérer un élément HTML
+
+.append()-
+	insère l'élément spécifié en dernier enfant de l'élément cible. 
+ 
+.appendTo()
+	inverse seulement l'ordre entre « ce qu'il faut ajouter » et « où l'ajouter »
+ 
+.prepend()- insère l'élément spécifié en premier enfant de l'élément cible.
+
+.prependTo() 
+
+
+	$(document).ready(function(){
+ 		$("body").append("<p>Je suis un paragraphe</p>")   
+    
+		});
+
+-------------- Avant et après
+
+	$('cible').after('<balise>À ajouter</balise>');
+.before()
+.after()
+
+	------ Pour insérer un paragraphe après l'id '#un'
+	
+	$(document).ready(function(){
+   	$('#un').after("<p>Un louveau paragraphe</p>"); 
+        
+});
+
+------------ Déplacer des élements
+
+$(document).ready(function(){
+$par = $("<p>Un nouveau paragraphe</p>");
+  
+   $('#deux').after($par);     
+});
+
+------------- Supprimer des éléments
+
+.empty()
+	supprime le contenu d'un élément et tous ses descendants. Par exemple, si vous videz (avec .empty()) un 'ol', vous allez aussi supprimer tous ses 'li' et leur texte.
+
+.remove()
+	supprime non seulement le contenu d'un élément, mais également l'élément lui-même.
+
+	$par = $("<p>Un nouveau paragraphe</p>");
+	$par.remove();
+
+--------------  Ajouter et supprimer des classes
+
+$('sélecteur').addClass('nomClasse');
+$('sélecteur').removeClass('nomClasse');
+
+Ajoutez le code jQuery nécessaire pour que votre div #text soit mis en valeur lors d'un clic !
+
+$(document).ready(function(){
+  $('#text').click(function(){
+  $('#text').addClass(' highlighted'); ou $(this).addClass('highlighted');
+       
+  });      
+    
+});
+
+-----------  Faire basculer les classes
+
+	.toggleClass()
+
+Si l'élément appelé a la classe reçue en argument, alors .toggleClass() retire cette classe ; si l'élément cible n'a pas cette classe, .toggleClass() l'ajoute.
+
+	$(document).ready(function(){
+  		$('#text').click(function(){
+  		$('#text').toggleClass('highlighted');
+       
+  });      
+    
+});
+
+-------------- Changer de style
+
+ $("div").height("100px");
+ $("div").width("50px");
+
+jQuery inclut également une fonction générale .css() qui prend deux arguments : le premier est l'élément CSS à modifier, le second est la valeur à lui donner.
+
+	$("div").css("background-color","#008800");
+
+Pratiquons un peu. Changez le <div> de votre document HTML pour qu'il ait une hauteur (height) de 200 pixels, une largeur (width) de 200 pixels ainsi que des coins arrondis (border-radius) de 10 pixels. Faisons survenir ce changement immédiatement, sans clic.
+
+	$(document).ready(function(){
+  		$('div').height("200px");
+  		$('div').width("200px");
+  		$('div').css('border-radius',"10px");   
+    
+		});
+
+
+---------- Modifier le contenu
+
+.html() 
+	est utilisé pour définir le contenu du premier élément 				correspondant trouvé
+
+	$('div').html();
+	récupérera le contenu HTML du premier div trouvé, et
+	
+	$('div').html("Vive le jQuery !");
+	définira le contenu du premier div trouvé en « Vive le jQuery ! ».
+
+
+.val()
+	est utilisé pour récupérer la valeur d'éléments d'un formulaire.
+	Ainsi $('input:checkbox:checked').val();
+
+récupérera la valeur de la première case à cocher cochée que jQuery trouve.
+
+
+------------ Mise en place leçon 10
+
+
+------------ Récupérer la valeur d'un formulaire
+
+.var()
+
+
+	<form name="checkListForm">
+			<input type="text" name="checkListItem"/>
+	</form>
+		<div id="bouton">Add!</div>
+		<br/>
+		<div class="list"></div>
+
+
+Créons un gestionnaire d'événement .click() pour notre élément #bouton
+Passez-le à une function(){}
+Dans votre function(){}, créez la variable aAjouter et donnez-lui la valeur des arguments.
+
+$(document).ready(function(){
+  $('#bouton').click(function(){
+      var aAjouter = $('input[name=checkListItem]').val();                 
+    
+  });    
+});
+
+
+----------- Ajouter à la fin du body
+Allez-y et ajoutez (.append()) un <div> comportant class=item au div .list de votre document HTML, puis ASSUREZ-VOUS de cliquer le bouton pour ajouter un item, l'exercice attendra que vous le fassiez !
+
+     -----Pour ajouter la 'var' '<div class="item">' + aAjouter + '</div>'
+$(document).ready(function(){
+  $('#bouton').click(function(){
+      var aAjouter = $('input[name=checkListItem]').val();
+   $('.list').append("<div class="item">"+aAjouter+"</div>");               
+    
+  });    
+});
+
+------------------ Supprimer ce qui a été cliqué
+
+ gestionnaire d'évènement : .on()
+
+	$(document).on('click', '.item', function(){
+        $(this).remove();
+    
+    });    
+
+  ------------------ Révision leçon 2 "Aller à l'essentiel" ----------
+
+<form>
+        MESSAGE: <input type="text" name="message" value="Tapez votre texte ici">
+</form>
+        <button>Add!</button><br/>
+        <div id="messages"></div>
+
+<script>
+$(document).ready(function() {
+    $('button').click(function() {
+    	var toAdd = $("input[name=message]").val();
+        $('#messages').append("<p>"+toAdd+"</p>");
+    });
+});
+	------------------------------------------------------
+
+	<body>
+        <div></div>   
+	</body>
+
+Votre div représente la planète Krypton.
+Faites-le disparaître en fondu (.fadeOut()) rapidement ('fast') !
+(Allez-y, faites-le de suite, pas besoin d'un clic.)
+
+------------------ Ajouter un gestionnaire d'événements ------------
+
+$(document).ready(function(){
+   $('div').click(function(){
+    $('div').fadeOut('fast'); 
+    
+});
+    
+});
+
+------------------- Combiner .click() .hover() ----------------
+(document).ready(function(){
+    $('div').hover(function(){
+        
+     $('div').addClass('red');
+});
+ 
+});
+
+------------------- L'événement double-clic : .dblclick() ---------------
+$(document).ready(function(){
+  $('div').dblclick(function(){
+      $(this).fadeOut('fast');    
+  });
+});
+
+------------------- Survol--------------------
+
+	<div>Accueil</div>
+        <div>A propos de nous</div>
+        <div>Contact</div>   
+
+l'effet hover est capable de prendre DEUX function(){}s séparées par une virgule vraiment essentielle !
+Le premier function(){} quand nous survolons la cible. 
+La seconde function(){} sera appelée quand notre souris quitte l'objet
+
+
+<script>
+
+$(document).ready(function(){
+
+  $('div' ).hover(function(){
+     $('div').addClass('active')   
+    },
+    
+     function(){
+    $('div').removeClass('active')
+        
+    }
+  );
+
+});
+
+------------------------- .focus() ! -------------------
+<form>
+	Name: <input type='text' name='name'></input>
+</form>
+
+
+$(document).ready(function(){
+
+  $('input').focus(function(){
+    $('input').css('outline-color', '#FF0000');      
+    });     
+    
+});
+
+--------------------  L'événement .keydown() .animate-----------------
+
+
+L'effet .animate() prend deux arguments : l'animation à effectuer ainsi que la durée de l'animation.
+
+ <div></div>   
+
+$(document).ready(function(){
+    $(document).keydown(function(){
+     $('div').animate({left:'+=10px'}, 500);   
+     });  
+    
+});
+
+----------------------- Utiliser .keydown() -------------------------
+<!-- POUR OBTENIR LES EFFETS SUR UNE IMAGE, ELLE DOIT EN POSITION: RELATIVE DANS LE CSS -->
+
+ <img src="http://i1061.photobucket.com/albums/t480/ericqweinstein/mario.jpg"/>
+
+$(document).ready(function(){
+  $(document).keydown(function(touche){
+           
+  });
+       
+});
+
+
+$(document).ready(function() {
+    $(document).keydown(function(key) {
+        switch(parseInt(key.which,10)) {
+			// On a appuyé sur la touche flèche gauche
+			case 37:
+			$('img').animate({left: "-=10px"}, 'fast');
+				break;
+			// On a appuyé sur la touche flèche vers le haut
+			case 38:
+			$('img').animate({top:"-=10px"}, 'fast');
+				break;
+			// On a appuyé sur la touche flèche droite
+			case 39:
+			$('img').animate({left:"+=10px"}, 'fast');
+				break;
+			// On a appuyé sur la touche flèche vers le bas
+			case 40:
+			$('img').animate({top:"-=10px"}, 'fast');
+				break;
+		}
+	});
+});
+
+--------------------- Davantage de pratique avec .animate() ----------
+	
+	Au chargement de la page, l'image se déplacera de 100px vers le bas en 1 seconde
+
+<!-- POUR OBTENIR LES EFFETS SUR UNE IMAGE, ELLE DOIT EN POSITION: RELATIVE DANS LE CSS -->
+
+
+<img src="http://i1061.photobucket.com/albums/t480/ericqweinstein/elevator.png"/>   
+
+$(document).ready(function(){
+    $('img' ).animate({ top: '+=100px'}, 1000);
+});
+
+----------------- Découverte de l'IU jQuery .effect('explode')-----------------
+UI: Interface utilisateur
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	
+	.effect('explode')
+
+$(document).ready(function(){
+  $('div').click(function(){
+     $('div').effect('explode');       
+  });        
+});
+
+---------------- Rebondissez ! .effect('bonce', {time:nb}, durée   --------------
+
+	.effect('bounce', {times:nombre_de_rebonds}, vitesse);
+
+$(document).ready(function(){
+  $('div').click(function(){
+     $('div').effect('bounce', {times:3}, 500);       
+  });        
+});
+
+---------------------- Glissement .effect(slide) ------------------
+
+	.effect('slide')
+
+$(document).ready(function(){
+  $('div').click(function(){
+     $('div').effect('slide');       
+  });        
+});
+
+
+--------------- Effets spéciaux ------------------
+
+	.accordion()
+
+$(document).ready(function() {
+    $("#menu").accordion({collapsible: true, active: false});
+});
+
+------------------ Déplacer un élément HTML .draggable()  -------------------
+
+	<div id="voiture">
+            <div id="top"></div>
+            <div id="bottom"></div>
+            <div id="fwheel"></div>
+            <div id="bwheel"></div>
+        </div>   
+
+$(document).ready(function(){
+  $('#voiture').draggable();  
+        
+});
+
+--------------------- Redimensionner .resizable()  ----------
+
+ <div>Redimensionnez-moi !</div>
+
+	div {
+    		height: 100px;
+    		background-color: #ABCDEF;
+    		font-family: Verdana, Arial, Sans-Serif;
+    		font-size: 1em;
+    		text-align: center;
+	}
+
+$(document).ready(function(){
+  $('div').resizable();  
+    
+});
+
+
+------------------- Une plus grande sélection .selectable()--------
+
+ 	<ol>
+            <li>Super Mario Bros.</li>
+            <li>Tetris</li>
+            <li>La légende de Zelda</li>
+            <li>Pokémon</li>
+        </ol>
+		
+
+	ol {
+    		list-style-type: none;
+		position: relative;
+		left: -20px;
+		}
+
+ol li {
+	background: #eeeeee;
+	border-radius: 5px;
+	border: 1px solid black;
+	margin: 3px;
+	padding: 0.4em;
+	font-size: 1em;
+	height: 16px;
+	font-family: Verdana, Arial, Sans-Serif;
+}
+
+ol .ui-selected {
+	background: #F39814; color: white;
+}   
+
+	$(document).ready(function(){
+   		$('ol').selectable();    
+    
+});
+
+--------------------- Remettons de l'ordre  .sortable() -------------
+Pour réordonner les éléments HTML
+
+Avec le même code HTML et CSS que le paragraphe ci-dessus
+
+$(document).ready(function(){
+   $('ol').sortable(); 
+    
+    
+});
+
+------------- Le jQuery efficace ---------------
+
+<div id="menu">
+         <h3>Section 1</h3>
+            	<div>
+                	<p>Je suis la première section !</p>
+            	</div>
+     	
+	<h3>Section 2</h3>       
+       		<div>
+                	<p>Je suis la deuxième section !</p>
+            </div>     
+        
+    	<h3>Section 3</h3>       
+       		<div>
+                	<p>Je suis la troisième section !</p>
+            </div>        
+        
+</div>
+
+$(document).ready(function(){
+   $('#menu').accordion()     
+    
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

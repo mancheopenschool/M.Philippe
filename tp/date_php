@@ -1,0 +1,5 @@
+Pour afficher la date dynamiquement en php (ne pas oublier de renommer votre index.html en index.php) :
+      <?php
+      setlocale (LC_TIME, 'fr_FR.utf8','fra');
+       echo date("j")." ".strftime("%B",time())." ".date("Y");
+      ?>
